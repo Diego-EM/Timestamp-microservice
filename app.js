@@ -2,7 +2,7 @@ const express = require('express');
 const dateController = require('./controller/dateController')
 const app = express();
 
-app.set('port',process.env.PORT | 3000);
+app.set('port',process.env.PORT || 3000);
 
 //Routes
 app.get('/api/:date',(req,res)=>{
