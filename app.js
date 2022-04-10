@@ -5,14 +5,10 @@ const app = express();
 app.set('port',process.env.PORT || 3000);
 
 //Routes
-app.get('/api/:date',(req,res)=>{
+app.get('/api/:date?',(req,res)=>{
     let date = req.params.date;
     if (/^\d{0,}$/.test(date)) date = parseInt(date);
     res.json(dateController.convertTime(date));
-})
-
-app.get('/api', (req, res)=>{
-    res.json(dateController.convertTime())
 })
 
 //Index file
