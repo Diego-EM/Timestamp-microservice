@@ -1,7 +1,9 @@
 const express = require('express');
-const dateController = require('./controller/dateController')
+const dateController = require('./controller/dateController');
+const cors = require('cors');
 const app = express();
 
+app.use(cors({optionsSuccessStatus: 200}));
 app.set('port',process.env.PORT || 3000);
 
 //Routes
