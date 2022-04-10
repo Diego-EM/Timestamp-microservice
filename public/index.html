@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timestamp Microservice</title>
+    <style>
+        h1,h2,p{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Timestamp Microservice</h1>
+    <hr>
+    <h2>Routes</h2>
+    <p>[GET] <span class="host"></span>/api</p>
+    <p>[GET] <span class="host"></span>/api/:date</p>
+    
+    <h2>Example Output</h2>
+    <p>{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</p>
+
+    <p>*Date param must be UNIX timestamp type or following YYYY-MM-DD date format</p>
+
+    <footer>
+        <p>Developed by Diego EM</p>
+    </footer>
+    <script>
+        const host = window.location.protocol + "//" + window.location.host;
+        const displayHost = document.querySelectorAll('.host');
+        for (let elem of displayHost){
+            elem.textContent =host
+        }
+    </script>
+</body>
+</html>
